@@ -124,7 +124,7 @@ Here’s a complete working example you can try instantly:
     <button type="submit">Submit</button>
   </form>
   
-  <script src="fds.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/x0root/FormDataSaver@main/fds.js"></script>
 </body>
 </html>
 ```
