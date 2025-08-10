@@ -49,29 +49,42 @@
     form.dispatchEvent(new CustomEvent("fds:cleared", { detail: { key: getFormKey(form) } }));
   }
 
-  // Banner UI for restore
+  // Banner UI for restore, with classes and inline styles for default look
   function showRestoreBanner(form) {
     const banner = document.createElement("div");
+    banner.className = "fds-restore-banner";
     banner.style.cssText = `
       position:fixed;bottom:10px;left:50%;transform:translateX(-50%);
       background:#222;color:#fff;padding:8px 12px;border-radius:6px;
       font-size:14px;z-index:9999;display:flex;gap:8px;align-items:center;
     `;
-    banner.innerHTML = `<span>Restore unsaved form data?</span>`;
+
+    const messageText = form.getAttribute("data-fds-restore-message") || "Restore unsaved form data?";
+    const messageSpan = document.createElement("span");
+    messageSpan.className = "fds-restore-message";
+    messageSpan.textContent = messageText;
+
     const yesBtn = document.createElement("button");
+    yesBtn.className = "fds-restore-yes";
     yesBtn.textContent = "Restore";
     yesBtn.style.cssText = "background:#4caf50;color:#fff;border:none;padding:4px 8px;border-radius:4px;cursor:pointer;";
+
+    const noBtn = document.createElement("button");
+    noBtn.className = "fds-restore-no";
+    noBtn.textContent = "Discard";
+    noBtn.style.cssText = "background:#f44336;color:#fff;border:none;padding:4px 8px;border-radius:4px;cursor:pointer;";
+
     yesBtn.onclick = () => {
       restoreForm(form);
       banner.remove();
     };
-    const noBtn = document.createElement("button");
-    noBtn.textContent = "Discard";
-    noBtn.style.cssText = "background:#f44336;color:#fff;border:none;padding:4px 8px;border-radius:4px;cursor:pointer;";
+
     noBtn.onclick = () => {
       clearForm(form);
       banner.remove();
     };
+
+    banner.appendChild(messageSpan);
     banner.appendChild(yesBtn);
     banner.appendChild(noBtn);
     document.body.appendChild(banner);
