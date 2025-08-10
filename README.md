@@ -128,6 +128,109 @@ Here’s a complete working example you can try instantly:
 </body>
 </html>
 ```
+---
+## Customize Restore Banner Text
+
+Add `data-fds-restore-message` attribute on your `<form>` with custom text:
+
+```html
+<form id="myForm" data-fds-restore-message="⚠️ You have unsaved changes. Restore now?">
+  <!-- form fields -->
+</form>
+```
+Default message (if none provided):
+
+Restore unsaved form data?
+
+
+---
+
+Customize Banner Styles
+
+Target these CSS classes in your stylesheet to style the banner and buttons:
+
+| CSS Class             | Description          |
+|-----------------------|----------------------|
+| `.fds-restore-banner`  | Banner container     |
+| `.fds-restore-message` | Text message         |
+| `.fds-restore-yes`     | Restore button       |
+| `.fds-restore-no`      | Discard button       |
+
+Example CSS
+```
+.fds-restore-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: navy;
+  color: yellow;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  box-shadow: 0 0 15px rgba(0,0,128,0.7);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fds-restore-message {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fds-restore-yes,
+.fds-restore-no {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.fds-restore-yes {
+  background: orange;
+  color: black;
+}
+
+.fds-restore-yes:hover {
+  background: darkorange;
+}
+
+.fds-restore-no {
+  background: gray;
+  color: white;
+}
+
+.fds-restore-no:hover {
+  background: dimgray;
+}
+```
+
+---
+
+Basic Usage Example
+```
+<form id="contactForm" data-fds-restore-message="You left unsaved data. Restore now?">
+  <input type="text" name="email" placeholder="Email" />
+  <input type="checkbox" name="subscribe" /> Subscribe
+  <button type="submit">Send</button>
+</form>
+
+<script src="FDS.js"></script>
+```
+Add your CSS styles to customize the banner as you want.
+
+
+---
+
+Use data-fds-restore-message to change banner text.
+
+Customize banner via .fds-restore-* CSS classes.
+
+Banner appears only if saved data exists on page load.
+
 For more example, see example.html.
 
 ---
