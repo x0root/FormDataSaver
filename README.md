@@ -23,6 +23,10 @@ Download `fds.js` and include it in your HTML:
 ```html
 <script src="fds.js" defer></script>
 ```
+Or
+```html
+<script src="https://cdn.jsdelivr.net/gh/x0root/FormDataSaver@main/fds.js"></script>
+```
 
 Or serve from your own CDN.
 
