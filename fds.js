@@ -83,7 +83,7 @@
       const key = getFormKey(form);
       let saveTimeout;
 
-      // If saved data exists, show banner
+      // Show banner immediately on page load if saved data exists
       if (localStorage.getItem(key)) {
         showRestoreBanner(form);
       }
