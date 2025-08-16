@@ -8,7 +8,7 @@ No backend needed. Just include the script and your users will never lose their 
 
 ---
 
-## Features
+## Why FormDataSaver?
 - **Automatic save** of ALL fields (including passwords, checkboxes, radios, selects, textareas, etc.).
 - **Restore after refresh** or browser restart (uses `localStorage`).
 - **Per-form isolation** – unique save keys for each form.
