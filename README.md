@@ -3,8 +3,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/x0root/FormDataSaver/refs/heads/main/logo.png" alt="FormDataSaver Logo" />
   
-**FDS** is a zero-config, drop-in JavaScript utility that **saves and restores ALL form data automatically** in the browser, even after page refresh or browser restart.  
-No backend needed. Just include the script and your users will never lose their typed data again.
+**FDS** is a Auto-save & restore form data. No backend, no hassle.
 
 ---
 
