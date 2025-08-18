@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/x0root/FormDataSaver/refs/heads/main/logo.png" alt="FormDataSaver Logo" />
 
-  [![CodeFactor](https://www.codefactor.io/repository/github/x0root/FormDataSaver)](https://www.codefactor.io/repository/github/x0root/FormDataAaver)
+  [![CodeFactor](https://www.codefactor.io/repository/github/x0root/FormDataSaver/badge)](https://www.codefactor.io/repository/github/x0root/FormDataSaver)
   
 **FDS** is a Auto-save & restore form data. No backend, no hassle.
 
