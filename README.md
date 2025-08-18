@@ -3,6 +3,8 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/x0root/FormDataSaver/refs/heads/main/logo.png" alt="FormDataSaver Logo" />
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Made in](https://img.shields.io/badge/Made%20in-Indonesia-red.svg)
   [![CodeFactor](https://www.codefactor.io/repository/github/x0root/FormDataSaver/badge)](https://www.codefactor.io/repository/github/x0root/FormDataSaver)
   
 **FDS** is a Auto-save & restore form data. No backend, no hassle.
